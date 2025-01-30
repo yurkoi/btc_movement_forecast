@@ -1,0 +1,29 @@
+stocks:
+  us_stocks:
+    - AAPL
+    - MSFT
+    - TSLA
+  eu_stocks:
+    - DAI.DE
+    - BMW.DE
+  india_stocks:
+    - RELIANCE.NS
+    - TCS.NS
+
+cryptos:
+  - ETH-USD
+  - BTC-USD
+  - SOL-USD
+  - XRP-USD
+  - ADA-USD
+  - TRX-USD
+
+chains:
+  - Ethereum
+  - Arbitrum
+  - Optimism
+  - Binance
+  - Avalanche
+  - Polygon
+  - Kucoin
+  - Base

@@ -1,0 +1,46 @@
+stocks:
+  us_stocks:
+    - MSFT
+    - AAPL
+    - GOOG
+    - NVDA
+    - AMZN
+    - META
+    - BRK-B
+    - LLY
+    - AVGO
+    - V
+    - JPM
+  eu_stocks:
+    - NVO
+    - MC.PA
+    - ASML
+    - RMS.PA
+    - OR.PA
+    - SAP
+    - ACN
+    - TTE
+    - SIE.DE
+    - IDEXY
+    - CDI.PA
+  india_stocks:
+    - RELIANCE.NS
+    - TCS.NS
+    - HDB
+    - BHARTIARTL.NS
+    - IBN
+    - SBIN.NS
+    - LICI.NS
+    - INFY
+    - ITC.NS
+    - HINDUNILVR.NS
+    - LT.NS
+cryptos:
+  - ETH-USD
+  - BTC-USD
+  - SOL-USD
+  - XRP-USD
+  - ADA-USD
+  - TRX-USD
+all_tickers:
+  combine: true

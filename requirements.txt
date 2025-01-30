@@ -1,0 +1,10 @@
+yfinance
+pycaret
+pandas
+optuna
+numpy
+plotly
+
+pandas_ta
+holidays
+mplfinance

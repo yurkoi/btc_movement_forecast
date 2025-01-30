@@ -1,0 +1,86 @@
+[
+    {
+        "Prediction Label": "TARGET_RANGE",
+        "From Date": "2024-06-01",
+        "Best Parameters": {
+            "n_estimators": 665,
+            "learning_rate": 0.03892250979056758,
+            "max_depth": 12,
+            "min_child_weight": 6,
+            "subsample": 0.921211736806897,
+            "colsample_bytree": 0.9938535673716624,
+            "gamma": 0.27786017582147926,
+            "alpha": 0.8121832558172113,
+            "lambda": 0.17419899549426732,
+            "scale_pos_weight": 9.63641087501746
+        },
+        "Accuracy": 0.6831275720164609,
+        "F1 Score": 0.641860465116279,
+        "ROC-AUC Score": 0.7553191489361702,
+        "Precision": 0.6106194690265486,
+        "Recall": 0.6764705882352942
+    },
+    {
+        "Prediction Label": "is_positive_growth_1d_future",
+        "From Date": "2024-06-01",
+        "Best Parameters": {
+            "n_estimators": 520,
+            "learning_rate": 0.06312328971418549,
+            "max_depth": 6,
+            "min_child_weight": 5,
+            "subsample": 0.9590831277158018,
+            "colsample_bytree": 0.6600481827601534,
+            "gamma": 0.1623753714039993,
+            "alpha": 0.4421433216952436,
+            "lambda": 0.2338578822749885,
+            "scale_pos_weight": 7.513285272539903
+        },
+        "Accuracy": 0.5267489711934157,
+        "F1 Score": 0.5936395759717314,
+        "ROC-AUC Score": 0.5282711864406779,
+        "Precision": 0.5316455696202531,
+        "Recall": 0.672
+    },
+    {
+        "Prediction Label": "is_positive_growth_3d_future",
+        "From Date": "2024-06-01",
+        "Best Parameters": {
+            "n_estimators": 779,
+            "learning_rate": 0.2793428216467353,
+            "max_depth": 9,
+            "min_child_weight": 7,
+            "subsample": 0.706136816071151,
+            "colsample_bytree": 0.6121920564464227,
+            "gamma": 0.08519882678086874,
+            "alpha": 0.17289161560941016,
+            "lambda": 0.3424853113942516,
+            "scale_pos_weight": 4.480483097827967
+        },
+        "Accuracy": 0.5596707818930041,
+        "F1 Score": 0.5931558935361216,
+        "ROC-AUC Score": 0.5407760381211708,
+        "Precision": 0.5864661654135338,
+        "Recall": 0.6
+    },
+    {
+        "Prediction Label": "is_positive_growth_5d_future",
+        "From Date": "2024-06-01",
+        "Best Parameters": {
+            "n_estimators": 487,
+            "learning_rate": 0.013736096600714492,
+            "max_depth": 16,
+            "min_child_weight": 2,
+            "subsample": 0.9233776823016705,
+            "colsample_bytree": 0.6041009453333477,
+            "gamma": 0.24198303120137488,
+            "alpha": 0.4069713005816693,
+            "lambda": 0.4153545878205933,
+            "scale_pos_weight": 1.6222189981603883
+        },
+        "Accuracy": 0.6049382716049383,
+        "F1 Score": 0.7018633540372671,
+        "ROC-AUC Score": 0.5734791524265209,
+        "Precision": 0.5978835978835979,
+        "Recall": 0.849624060150376
+    }
+]
