@@ -137,8 +137,8 @@ if __name__ == "__main__":
 
     df_full, new_predictors = horison_calculation(df_full)
 
-    levels = support_resistance_levels(df_full, 365, first_w=1.0, atr_mult=3.0)
-    df_full['sr_signal'] = sr_penetration_signal(df_full, levels)
+    #levels = support_resistance_levels(df_full, 365, first_w=1.0, atr_mult=3.0)
+    # df_full['sr_signal'] = sr_penetration_signal(df_full, levels)
 
     result_df1 = historical_tvl()
     result_df1.set_index('Date', inplace=True)
@@ -170,8 +170,7 @@ if __name__ == "__main__":
                             'ad', 'adosc', 'obv', 'atr', 'natr', 'ht_dcperiod', 'ht_dcphase',
                             'ht_phasor_inphase', 'ht_phasor_quadrature', 'ht_sine_sine', 'ht_sine_leadsine',
                             'ht_trendmod', 'avgprice', 'medprice', 'typprice', 'wclprice',
-                            'us_holiday', 'nyse_holiday', 'ecb_holiday',
-                            'sr_signal']
+                            'us_holiday', 'nyse_holiday', 'ecb_holiday']
 
     TECHNICAL_PATTERNS = [g for g in df_full.keys() if g.find('cdl') >= 0]
     print(f'Technical patterns count = {len(TECHNICAL_PATTERNS)}, examples = {TECHNICAL_PATTERNS[0:5]}')

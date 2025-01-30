@@ -30,19 +30,19 @@ def fetch_data(ticker):
     historyPrices['Date'] = historyPrices.index.date
 
     for i in [1, 3, 7, 30, 90, 365]:
-        historyPrices[f'growth_{i}d'] = historyPrices['Adj Close'] / historyPrices['Adj Close'].shift(i)
+        historyPrices[f'growth_{i}d'] = historyPrices['Close'] / historyPrices['Close'].shift(i)
 
-    historyPrices['growth_future_5d'] = historyPrices['Adj Close'].shift(-5) / historyPrices['Adj Close']
-    historyPrices['growth_future_3d'] = historyPrices['Adj Close'].shift(-3) / historyPrices['Adj Close']
-    historyPrices['growth_future_1d'] = historyPrices['Adj Close'].shift(-1) / historyPrices['Adj Close']
+    historyPrices['growth_future_5d'] = historyPrices['Close'].shift(-5) / historyPrices['Close']
+    historyPrices['growth_future_3d'] = historyPrices['Close'].shift(-3) / historyPrices['Close']
+    historyPrices['growth_future_1d'] = historyPrices['Close'].shift(-1) / historyPrices['Close']
 
     historyPrices['SMA10'] = historyPrices['Close'].rolling(10).mean()
     historyPrices['SMA20'] = historyPrices['Close'].rolling(20).mean()
     historyPrices['growing_moving_average'] = (historyPrices['SMA10'] > historyPrices['SMA20']).astype(int)
     historyPrices['high_minus_low_relative'] = \
-        (historyPrices['High'] - historyPrices['Low']) / historyPrices['Adj Close']
+        (historyPrices['High'] - historyPrices['Low']) / historyPrices['Close']
 
-    historyPrices['volatility'] = historyPrices['Adj Close'].rolling(30).std() * np.sqrt(252)
+    historyPrices['volatility'] = historyPrices['Close'].rolling(30).std() * np.sqrt(252)
 
     historyPrices['is_positive_growth_5d_future'] = (historyPrices['growth_future_5d'] > 1).astype(int)
     historyPrices['is_positive_growth_3d_future'] = (historyPrices['growth_future_3d'] > 1).astype(int)
@@ -75,8 +75,8 @@ def stock_collect_main(save_file=True):
     stocks_df['ticker_type'] = stocks_df['Ticker'].apply(get_ticker_type)
 
     stocks_df['Date'] = pd.to_datetime(stocks_df['Date'])
-    stocks_df[['Open', 'High', 'Low', 'Close', 'Volume', 'Adj Close']] = \
-        stocks_df[['Open', 'High', 'Low', 'Close', 'Volume', 'Adj Close']].astype('float64')
+    stocks_df[['Open', 'High', 'Low', 'Close', 'Volume']] = \
+        stocks_df[['Open', 'High', 'Low', 'Close', 'Volume']].astype('float64')
 
     if save_file:
         stocks_df.to_parquet('./data/stocks_df.parquet.brotli', compression='brotli')

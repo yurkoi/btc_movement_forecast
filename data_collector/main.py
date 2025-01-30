@@ -32,7 +32,7 @@ def download_and_process_data():
         "snp500": download_and_calculate_growth("^GSPC", 'snp500'),
         "dji": download_and_calculate_growth("^DJI", 'dji'),
         "epi_etf": download_and_calculate_growth("EPI", 'epi'),
-        "vix": yf.download(tickers="^VIX", interval='1d', period='max')['Adj Close'],
+        "vix": yf.download(tickers="^VIX", interval='1d', period='max')['Close'],
         "gold": download_and_calculate_growth("GC=F", 'gold'),
         "crude_oil": download_and_calculate_growth("CL=F", 'wti_oil'),
         "brent_oil": download_and_calculate_growth("BZ=F", 'brent_oil'),

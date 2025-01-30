@@ -1,10 +1,10 @@
 {
     "1_day_prediction": 0.0,
-    "3_day_prediction": 0.0,
+    "3_day_prediction": 1.0,
     "5_day_prediction": 0.0,
     "1d_Range_pred": 1.0,
-    "1_day_probability": 0.1448661834001541,
-    "3_day_probability": 0.24687857925891876,
-    "5_day_probability": 0.36301326751708984,
-    "1d_Range_pred_proba": 0.6804128289222717
+    "1_day_probability": 0.15177509188652039,
+    "3_day_probability": 0.8712747693061829,
+    "5_day_probability": 0.4159415662288666,
+    "1d_Range_pred_proba": 0.6286097764968872
 }

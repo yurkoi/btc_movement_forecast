@@ -49,7 +49,7 @@ def download_and_calculate_growth(ticker, prefix, interval='1d', period='max', d
     if df.empty:
       return pd.DataFrame()  # Return empty DataFrame if no data is fetched
     for i in [1, 3, 7, 30, 90, 365]:
-      df['growth_' + prefix + '_' + str(i) + 'd'] = df['Adj Close'] / df['Adj Close'].shift(i)
+      df['growth_' + prefix + '_' + str(i) + 'd'] = df['Close'] / df['Close'].shift(i)
     growth_keys = [k for k in df.keys() if k[0].startswith('growth')]
     df = df[growth_keys]
     df.columns = df.columns.get_level_values(0)
