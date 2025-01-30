@@ -241,6 +241,9 @@ if __name__ == "__main__":
 
         results.append(result)
 
+    with open("./modeling/predictions_metrics.json", "w") as f:
+        json.dump(results, f, indent=4)
+
     with open("./modeling/predictions_metrics.json", "r") as file:
         data = json.load(file)
 
