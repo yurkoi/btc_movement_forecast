@@ -298,7 +298,7 @@ if __name__ == "__main__":
     num_to_count = -1
 
     results = {
-        # "date": str(results_df.iloc[num_to_count]['Date'])[:-9],
+        "date": str(new_df.iloc[num_to_count-1]['Date'])[:-9],
         "1_day_prediction": results_df.iloc[num_to_count,]['1d_pred'],
         "3_day_prediction": results_df.iloc[num_to_count,]['3d_pred'],
         "5_day_prediction": results_df.iloc[num_to_count,]['5d_pred'],
@@ -307,9 +307,11 @@ if __name__ == "__main__":
         "3_day_probability": results_df.iloc[num_to_count,]['3d_pred_proba'],
         "5_day_probability": results_df.iloc[num_to_count,]['5d_pred_proba'],
         "1d_Range_pred_proba": results_df.iloc[num_to_count,]['1d_Range_pred_proba'],
-        # "Close_price": results_df.iloc[num_to_count,]['Close'],
-        # "Absolute_avg_Range": results_df.iloc[num_to_count,]['absolute_avg_Range'],
+        "Close_price": new_df.iloc[num_to_count-1,]['Close'],
+        # "Absolute_avg_Range": new_df.iloc[num_to_count,]['absolute_avg_Range'],
     }
+
+    print(results)
 
     with open("results.json", "w") as json_file:
         json.dump(results, json_file, indent=4)
