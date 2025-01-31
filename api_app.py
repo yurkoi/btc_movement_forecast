@@ -24,3 +24,4 @@ def get_model_results():
     with open("./modeling/predictions_metrics.json", "r") as file:
         models_data = json.load(file)
     return JSONResponse(content=models_data)
+

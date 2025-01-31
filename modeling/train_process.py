@@ -73,7 +73,7 @@ def optimize_n_train(X_train, y_train, X_test, y_test, best_params=None, optimiz
             return 1 - optimised_variable
 
         study = optuna.create_study(direction='minimize')
-        study.optimize(objective, n_trials=2, timeout=1200)
+        study.optimize(objective, n_trials=15, timeout=1200)
 
         best_params = study.best_params
 
