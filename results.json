@@ -1,12 +1,12 @@
 {
-    "date": "2025-01-29",
+    "date": "2025-01-30",
     "1_day_prediction": 0.0,
     "3_day_prediction": 1.0,
     "5_day_prediction": 1.0,
     "1d_Range_pred": 0.0,
-    "1_day_probability": 0.16901865601539612,
-    "3_day_probability": 0.9505583643913269,
-    "5_day_probability": 0.5352675914764404,
-    "1d_Range_pred_proba": 0.12902282178401947,
-    "Close_price": 103703.2109375
+    "1_day_probability": 0.037483323365449905,
+    "3_day_probability": 0.9017602205276489,
+    "5_day_probability": 0.6922854781150818,
+    "1d_Range_pred_proba": 0.05303478240966797,
+    "Close_price": 104573.0
 }
