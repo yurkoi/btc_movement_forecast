@@ -73,7 +73,7 @@ def optimize_n_train(X_train, y_train, X_test, y_test, best_params=None, optimiz
             return 1 - optimised_variable
 
         study = optuna.create_study(direction='minimize')
-        study.optimize(objective, n_trials=15, timeout=1200)
+        study.optimize(objective, n_trials=20, timeout=1200)
 
         best_params = study.best_params
 
@@ -298,10 +298,10 @@ if __name__ == "__main__":
     results_df = pd.DataFrame(temp_results)
     results_df.to_csv("results_data.csv")
 
-    num_to_count = -1
+    num_to_count = -2
 
     results = {
-        "date": str(new_df.iloc[num_to_count-1]['Date'])[:-9],
+        "date": str(new_df.iloc[num_to_count]['Date'])[:-9],
         "1_day_prediction": results_df.iloc[num_to_count,]['1d_pred'],
         "3_day_prediction": results_df.iloc[num_to_count,]['3d_pred'],
         "5_day_prediction": results_df.iloc[num_to_count,]['5d_pred'],
@@ -310,7 +310,7 @@ if __name__ == "__main__":
         "3_day_probability": results_df.iloc[num_to_count,]['3d_pred_proba'],
         "5_day_probability": results_df.iloc[num_to_count,]['5d_pred_proba'],
         "1d_Range_pred_proba": results_df.iloc[num_to_count,]['1d_Range_pred_proba'],
-        "Close_price": new_df.iloc[num_to_count-1,]['Close'],
+        "Close_price": new_df.iloc[num_to_count,]['Close'],
         # "Absolute_avg_Range": new_df.iloc[num_to_count,]['absolute_avg_Range'],
     }
 

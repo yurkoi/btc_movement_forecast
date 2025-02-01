@@ -125,5 +125,5 @@ if __name__ == "__main__":
     ipo_data = get_ipos_data_by_years()
     ipo_stats = ipos_data_preparation(ipo_data)
     merged_df = localize_and_merge(merged_df, ipo_stats, left_on="Date")
-
+    print(merged_df.tail(5))
     process_and_save_merged_data(merged_df, './data')
